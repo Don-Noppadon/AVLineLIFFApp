@@ -29,7 +29,7 @@ await request.post({
     }
 })
 
-const btnAPI = document.getElementById('btnAPI1');
+const btnAPI = document.getElementById('btnAPI');
 
 btnAPI.onclick = () => {
     SendDataToNav();
