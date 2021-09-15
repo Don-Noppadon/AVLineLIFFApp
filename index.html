@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>My LIFF app1</title>
+    <title>My LIFF app</title>
     <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 
 <body>
-    <p id="os"><b>OS1:</b> </p>
+    <p id="os"><b>OS:</b> </p>
     <p id="language"><b>Language:</b> </p>
     <p id="version"><b>Version:</b> </p>
     <p id="isInClient"><b>isInClient:</b> </p>
@@ -37,6 +37,7 @@
     <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
     <button id="btnLogOut" onclick="logOut()">Log Out</button>
     <button id="btnClose" onclick="closed()">Close</button>
+    <button id="btnAPI" onclick="SendDataToNav()">API</button>
 
     <!-- <script src="js/vconsole.min.js"></script> -->
     <!-- <script>
@@ -68,6 +69,31 @@
 
         function getEnvironment() {}
 
+        function SendDataToNav() {
+            var myHeaders = new Headers();
+            myHeaders.append('Content-Type', 'application/json');
+            myHeaders.append('Authorization', 'Basic dXNlcjAxOkxzMTIzNDU2');
+
+            var raw = JSON.stringify({
+                EntryNo: 3,
+                Description: 'อรทัย3'
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch(
+                    "http://crbdns.trueddns.com:17412/BC170/ODataV4/Company('CRONUS%20-%20LSVIP')/APILineEntry",
+                    requestOptions
+                ).then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
+
+        }
         async function main() {
             alert("LINE Developers x Skooldio")
             await liff.init({
