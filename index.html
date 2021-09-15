@@ -87,12 +87,11 @@
             };
 
             fetch(
-                    "http://crbdns.trueddns.com:17412/BC170/ODataV4/Company('CRONUS%20-%20LSVIP')/APILineEntry",
+                    "https://crbdns.trueddns.com:17412/BC170/ODataV4/Company('CRONUS%20-%20LSVIP')/APILineEntry",
                     requestOptions
                 ).then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
-            alert('555');
         }
         async function main() {
             alert("LINE Developers x Skooldio")
