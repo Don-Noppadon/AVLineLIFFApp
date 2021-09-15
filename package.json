@@ -1,8 +1,8 @@
 {
-  "name": "avliff",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {
-    "@line/liff": "2.4.1"
-  }
+    "name": "avliff",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@line/liff": "2.4.1"
+    }
 }
