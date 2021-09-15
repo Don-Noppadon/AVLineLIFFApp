@@ -2,41 +2,87 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>AV LIFF</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+
+    <title>My LIFF app</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 
-<body id="body">
-    <section id="profile">
-        <img id="pictureUrl" src="https://cdn2.hubspot.net/hubfs/491011/lsblog2019/LS-Central-logo-878x380.jpg" />
-        <section id="detail">
-            <p id="userId"></p>
-            <p id="displayName"></p>
-            <p id="statusMessage"></p>
-            <p id="email"></p>
+<body>
+    <p id="os"><b>OS:</b> </p>
+    <p id="language"><b>Language:</b> </p>
+    <p id="version"><b>Version:</b> </p>
+    <p id="isInClient"><b>isInClient:</b> </p>
+    <p id="accessToken"><b>AccessToken:</b> </p>
+    <img id="pictureUrl">
+    <p id="userId"><b>userId:</b> </p>
+    <p id="displayName"><b>displayName:</b> </p>
+    <p id="statusMessage"><b>statusMessage:</b> </p>
+    <p id="decodedIDToken"><b>email:</b> </p>
+    <p id="type"><b>type:</b> </p>
+    <p id="viewType"><b>viewType:</b> </p>
+    <p id="utouId"><b>utouId:</b> </p>
+    <p id="roomId"><b>roomId:</b> </p>
+    <p id="groupId"><b>groupId:</b> </p>
+    <p id="friendship"><b>isFriendship:</b> </p>
+    <p id="scanCode"><b>Code:</b> </p>
+    <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
+    <p id="universalLink1"><b>Universal Link:</b> </p>
+    <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
+    <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-            <!--<p id="accessToken"></p>-->
-        </section>
-        <!--
-      <p id="fuserId"></p>
-      <p id="fdisplayName"></p>
-      -->
-    </section>
+    <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+    <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+    <button onclick="openWindow()">Open Window</button>
+    <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+    <button id="btnLogOut" onclick="logOut()">Log Out</button>
+    <button id="btnClose" onclick="closed()">Close</button>
+    <button id="btnAPI">API</button>
 
+    <!-- <script src="js/vconsole.min.js"></script> -->
+    <!-- <script>
+    var vConsole = new VConsole()
+    console.log("Hello World!")
+  </script> -->
 
-    <form action="">
-        <!--<input type="text" id="fuserId"><br><br>
-		<input type="text" id="fdisplayName"><br><br>
-		<input type="submit" value="Submit">-->
-    </form>
+    <!-- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
+    <script>
+        function createUniversalLink() {}
 
-    <section id="button">
-        <button id="btnShare">Share Message</button>
-        <button id="btnLogIn"> Log In</button>
-        <button id="btnLogOut">Log Out</button>
-        <button id="btnApi">API</button>
-    </section>
+        async function shareMsg() {}
 
+        function logOut() {}
+
+        function closed() {}
+
+        async function scanCode() {}
+
+        function openWindow() {}
+
+        async function getFriendship() {}
+
+        async function sendMsg() {}
+
+        function getContext() {}
+
+        async function getUserProfile() {}
+
+        function getEnvironment() {}
+
+        async function main() {
+            //alert("LINE Developers x Skooldio")
+            await liff.init({
+                    liffId: "YOUR-LIFF-ID"
+                })
+                // getEnvironment()
+                // getUserProfile()
+                // getContext()
+                // getFriendship()
+                // createUniversalLink()
+        }
+        main()
+    </script>
 </body>
 
 </html>
