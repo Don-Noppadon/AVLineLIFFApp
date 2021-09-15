@@ -38,7 +38,7 @@
     <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
     <button id="btnLogOut" onclick="logOut()">Log Out</button>
     <button id="btnClose" onclick="closed()">Close</button>
-    <button id="btnAPI" onclick="SendDataToNav()">API</button>
+    <button id="btnAPI">API</button>
 
     <!-- <script src="js/vconsole.min.js"></script> -->
     <!-- <script>
@@ -69,31 +69,6 @@
         async function getUserProfile() {}
 
         function getEnvironment() {}
-
-        function SendDataToNav() {
-            var myHeaders = new Headers();
-            myHeaders.append('Content-Type', 'application/json');
-            myHeaders.append('Authorization', 'Basic dXNlcjAxOkxzMTIzNDU2');
-
-            var raw = JSON.stringify({
-                EntryNo: 3,
-                Description: 'อรทัย3'
-            });
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-
-            fetch(
-                    "http://crbdns.trueddns.com:17412/BC170/ODataV4/Company('CRONUS%20-%20LSVIP')/APILineEntry",
-                    requestOptions
-                ).then(response => response.text())
-                .then(result => console.log(result))
-                .catch(error => console.log('error', error));
-        }
 
         async function main() {
             alert("LINE Developers x Skooldio")
