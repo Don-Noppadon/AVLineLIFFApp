@@ -1,6 +1,7 @@
 // Import stylesheets
-import './css/style.css';
 alert('test');
+import './css/style.css';
+
 import liff from '@line/liff';
 
 // Import the functions you need from the SDKs you need
