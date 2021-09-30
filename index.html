@@ -2,91 +2,50 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <meta charset="utf-8" />
 
-    <title>My LIFF app</title>
-    <link rel="stylesheet" href="css/style.css" media="all">
+    <title>AV LIFF</title>
 </head>
 
-<body>
-    <p id="os"><b>OS:</b> </p>
-    <p id="language"><b>Language:</b> </p>
-    <p id="version"><b>Version:</b> </p>
-    <p id="isInClient"><b>isInClient:</b> </p>
-    <p id="accessToken"><b>AccessToken:</b> </p>
-    <img id="pictureUrl">
-    <p id="userId"><b>userId:</b> </p>
-    <p id="displayName"><b>displayName:</b> </p>
-    <p id="statusMessage"><b>statusMessage:</b> </p>
-    <p id="decodedIDToken"><b>email:</b> </p>
-    <p id="type"><b>type:</b> </p>
-    <p id="viewType"><b>viewType:</b> </p>
-    <p id="utouId"><b>utouId:</b> </p>
-    <p id="roomId"><b>roomId:</b> </p>
-    <p id="groupId"><b>groupId:</b> </p>
-    <p id="friendship"><b>isFriendship:</b> </p>
-    <p id="scanCode"><b>Code:</b> </p>
-    <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
-    <p id="universalLink1"><b>Universal Link:</b> </p>
-    <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
-    <p><a href="liff/path/?param=9">Link to Path</a></p>
+<body id="body">
+    <main>
+        <section id="profile">
+            <img id="companyPictureUrl" src="https://www.avision.co.th/2013/images/Logo10.jpg" />
+            <p id="companyMsg">
+                <b>Avision Line LIFF Official</b>
+            </p>
 
-    <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-    <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-    <button onclick="openWindow()">Open Window</button>
-    <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-    <button id="btnLogOut" onclick="logOut()">Log Out</button>
-    <button id="btnClose" onclick="closed()">Close</button>
-    <button id="btnAPI">API</button>
+            <img id="pictureUrl" />
+            <section id="secLineDetail">
+                <div id="userId"></div>
+                <div id="displayName"></div>
+                <div id="statusMessage"></div>
+                <div id="email"></div>
+                <!--<div id="accessToken"></div>-->
+            </section>
+            <section id="memberRegister" hidden="true"></section>
+            <section id="memberDetail" hidden="true"></section>
 
-    <!-- <script src="js/vconsole.min.js"></script> -->
-    <!-- <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-  </script> -->
+            <!--
+      <p id="fuserId"></p>
+      <p id="fdisplayName"></p>
+      -->
+        </section>
+        <form action="">
+            <!--<input type="text" id="fuserId"><br><br>
+		<input type="text" id="fdisplayName"><br><br>
+		<input type="submit" value="Submit">-->
+        </form>
+        <div id="mydata"></div>
 
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-    <script>
-        function createUniversalLink() {}
-
-        async function shareMsg() {}
-
-        function logOut() {}
-
-        function closed() {}
-
-        async function scanCode() {}
-
-        function openWindow() {}
-
-        async function getFriendship() {}
-
-        async function sendMsg() {}
-
-        function getContext() {}
-
-        async function getUserProfile() {}
-
-        function getEnvironment() {
-            document.getElementById("os").append(liff.getOS())
-            document.getElementById("language").append(liff.getLanguage())
-            document.getElementById("language").append(liff.getLanguage())
-        }
-
-        async function main() {
-            //alert("LINE Developers x Skooldio")
-            await liff.init({
-                liffId: "1655050259-lnja5368"
-            })
-            getEnvironment()
-                // getUserProfile()
-                // getContext()
-                // getFriendship()
-                // createUniversalLink()
-        }
-        main()
-    </script>
+        <section id="button">
+            <button id="btnShare">Share Message</button>
+            <button id="btnLogIn">Log In</button>
+            <button id="btnApi">Get API</button>
+            <button id="btnApiPost">Post API</button>
+            <button id="btnLogOut">Log Out</button>
+        </section>
+    </main>
 </body>
 
 </html>
