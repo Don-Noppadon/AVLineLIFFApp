@@ -1,5 +1,5 @@
 // Import stylesheets
-import '/css/style.css';
+//import '/css/style.css';
 
 import liff from '@line/liff';
 
