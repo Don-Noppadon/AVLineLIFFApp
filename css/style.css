@@ -45,7 +45,7 @@ main {
 #pictureUrl {
     margin-top: 12px;
     margin: 12px auto 12px;
-    width: 240px;
+    width: 140px;
     --height: 240px;
     display: -moz-box;
     display: -webkit-box;
