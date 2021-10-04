@@ -1,0 +1,572 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+  <title>My LIFF App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main>
+  <form onsubmit='return onSubmit(this)'>
+    <div class="center">
+      <div class="head">
+        <p>ข้อมูลสมาชิก</p>
+      </div>
+    </div>
+    <br>
+
+    <div class="center">
+      <div class="user_data">
+        <div>
+          <table style="width: 100%">
+            <tr>
+              <td class="title" style="width: 40%">Card No.</td>
+              <td class="data" style="width: 60%" id="card"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">Account No.</td>
+              <td class="data" style="width: 60%" id="account"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">Contact No.</td>
+              <td class="data" style="width: 60%" id="contact"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">Id Card No.</td>
+              <td class="data" style="width: 60%" id="id"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">Scheme Code</td>
+              <td class="data" style="width: 60%" id="scheme"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">เพศ</td>
+              <td class="data" style="width: 60%" id="sex"></td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="center">
+      <div class="head">
+        <p>แก้ไขข้อมูลสมาชิก</p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="center">
+      <div class="user_data">
+
+        <div class="row">
+          <div class="col-25">
+            <label for="name">ชื่อ-นามสกุล</label>
+          </div>
+          <div class="center">
+            <input type="text" id="name" name="name" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="bdate">วันเดือนปีเกิด</label>
+          </div>
+          <div class="center">
+            <select name="day" id="day">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select name="month" id="month">
+              <option value="มกราคม">มกราคม</option>
+              <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+              <option value="มีนาคม">มีนาคม</option>
+              <option value="เมษายน">เมษายน</option>
+              <option value="พฤษภาคม">พฤษภาคม</option>
+              <option value="มิถุนายน">มิถุนายน</option>
+              <option value="กรกฎาคม">กรกฎาคม</option>
+              <option value="สิงหาคม">สิงหาคม</option>
+              <option value="กันยายน">กันยายน</option>
+              <option value="ตุลาคม">ตุลาคม</option>
+              <option value="พฤศจิกายน">พฤศจิกายน</option>
+              <option value="ธันวาคม">ธันวาคม</option>
+            </select>
+            <select name="year" id="year">
+              <option value="1970">1970</option>
+              <option value="1971">1971</option>
+              <option value="1972">1972</option>
+              <option value="1973">1973</option>
+              <option value="1974">1974</option>
+              <option value="1975">1975</option>
+              <option value="1976">1976</option>
+              <option value="1977">1977</option>
+              <option value="1978">1978</option>
+              <option value="1979">1979</option>
+              <option value="1980">1980</option>
+              <option value="1981">1981</option>
+              <option value="1982">1982</option>
+              <option value="1983">1983</option>
+              <option value="1984">1984</option>
+              <option value="1985">1985</option>
+              <option value="1986">1986</option>
+              <option value="1987">1987</option>
+              <option value="1988">1988</option>
+              <option value="1989">1989</option>
+              <option value="1990">1990</option>
+              <option value="1991">1991</option>
+              <option value="1992">1992</option>
+              <option value="1993">1993</option>
+              <option value="1994">1994</option>
+              <option value="1995">1995</option>
+              <option value="1996">1996</option>
+              <option value="1997">1997</option>
+              <option value="1998">1998</option>
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="address">ที่อยู่ </label>
+          </div>
+          <div class="center">
+            <input type="text" id="address" name="address" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="district">แขวง/อำเภอ </label>
+          </div>
+          <div class="center">
+            <input type="text" id="district" name="district" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="province">จังหวัด </label>
+          </div>
+          <div class="center">
+            <input type="text" id="province" name="province" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="postcode">รหัสไปรษณีย์</label>
+          </div>
+          <div class="center">
+            <input type="number" id="postcode" name="postcode" />
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-25">
+            <label for="phone">เบอร์โทรศัพท์</label>
+          </div>
+          <div class="center">
+            <input type="number" id="phone" name="phone" />
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-25">
+            <label for="email">อีเมล</label>
+          </div>
+          <div class="center">
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+    <div class="center">
+      <div class="consen">
+
+        <input type="checkbox" id="myCheck_1" name="consen 1">ยอมรับ&nbsp;
+        <a class="modal-button" href="#myModal1">การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลทั่วไป</a>
+        <br>
+
+
+
+        <input type="checkbox" id="myCheck_2" name="consen 2">ยอมรับ&nbsp;
+        <a class="modal-button" href="#myModal2">การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลที่อ่อนไหว (Sensitive Personal
+          Data)</a>
+        <br>
+
+        <input type="checkbox" id="myCheck_3" name="consen 3">ยอมรับ&nbsp;
+        <a class="modal-button" href="#myModal3">การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลทั่วไป</a>
+        <br>
+      </div>
+    </div>
+    <br>
+    <div>
+      <div class="center">
+        <button class="button" onClick="history.go(-1); return false;">
+          ย้อนกลับ
+        </button>
+        <button class="button">ยืนยัน</button>
+      </div>
+    </div>
+  </form>
+
+
+
+
+
+  <!-- The Modal -->
+  <div id="myModal1" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4>การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลทั่วไป</h4>
+      </div>
+      <div class="modal-body">
+        <div class="detail">
+          พิจารณาได้จากรูปแบบการดำเนินการ และวัตถุประสงค์การใช้ เก็บรวบรวมหรือเปิดเผยข้อมูลนั้น
+          ซึ่งในแต่ละชุดข้อมูลก็มีรายละเอียดที่แตกต่างกัน ทั้งนี้ โดยหลักการตามกฎหมาย PDPA
+          ระบุว่าให้ใช้ฐานความยินยอม (Consent) เป็นฐานหลักในการประมวลผลข้อมูล
+          เนื่องจากเปิดโอกาสให้เจ้าของข้อมูลส่วนบุคคลสามารถเลือกจัดการข้อมูลของตนเองได้เต็มที่
+          ในทางปฏิบัติแล้วผู้ควบคุมข้อมูลส่วนบุคคลอาจไม่สามารถใช้ฐานความยินยอม (Consent)
+          กับการขอใช้หรือเก็บรวบรวมกับข้อมูลทุกประเภทได้
+          ซึ่งองค์กรแต่ละประเภทย่อมมีความจำเป็นในการอ้างอิงฐานตามกฎหมายแตกต่างกันไปตามลักษณะของธุรกรรมที่เกี่ยวข้องกับข้อมูลส่วนบุคคล
+          โดยกฎหมาย PDPA
+          ยังมีวิธีการประมวลผลตามฐานกฎหมายอื่นที่สามารถปรับใช้ตามบริบทและวัตถุประสงค์ ได้แก่ ฐานสัญญา (Contract),
+          ฐานหน้าที่ตามกฎหมาย (Legal Obligation), ฐานประโยชน์สำคัญต่อชีวิต (Vital Intertest),
+          ฐานภารกิจของรัฐ (Public Task), ฐานประโยชน์อันชอบธรรม (Legitimate Interest), ฐานจดหมายเหตุ วิจัย สถิติ
+          (Scientific or Research) หากวัตถุประสงค์การใช้
+          เก็บรวบรวมหรือเปิดเผยข้อมูลเข้าตามฐานการประมวลผล 5 ฐานนี้ ผู้ควบคุมข้อมูลส่วนบุคคลก็ไม่ต้องขอความยินยอม
+          (Consent) จากเจ้าของข้อมูลอีก
+          ฐานการประมวลผลข้อมูลตามกฎหมาย (Lawful Basis) ของข้อมูลส่วนบุคคลทั่วไปที่ไม่ต้องขอความยินยอม (consent)
+          มีดังนี้<br>
+
+          <li>ฐานสัญญา (Contract) จะใช้ได้กับข้อมูลส่วนบุคคลทั่วไปเท่านั้น
+            ฐานนี้เป็นการปฏิบัติตามสัญญาระหว่างผู้ควบคุมข้อมูลกับเจ้าของข้อมูลส่วนบุคคล
+            สัญญาตามฐานนี้จะทำเป็นลายลักษณ์อักษรหรือไม่เป็นลายลักษณ์อักษรก็ได้ ตัวอย่างเช่น
+            สัญญาเปิดบัญชีธนาคารและการให้บริการกับลูกค้าของธนาคาร
+            การสมัครสมาชิกฟิตเนสและการให้บริการด้านการออกกำลังกายกับสมาชิกฟิตเนส
+            การปฏิบัติตามสัญญาซื้อขายโดยเว็บไซต์ E-commerce เก็บรวบรวมที่อยู่จัดส่งของผู้ซื้อให้กับร้านค้าเพื่อส่งสินค้า
+          </li>
+          <li>ฐานหน้าที่ตามกฎหมาย (Legal Obligation) เป็นสิ่งที่ผู้ควบคุมข้อมูลส่วนบุคคลต้องปฏิบัติตามกฎหมาย
+            เนื่องจากเป็นเรื่องที่กฎหมายกำหนดไว้ชัดเจนว่าต้องปฏิบัติตาม
+            เช่น การให้สิทธิลูกจ้างลาป่วยหรือลาพักผ่อนตามกฎหมายแรงงาน
+            การให้ข้อมูลกับหน่วยงานหรือพนักงานเจ้าหน้าที่ของรัฐซึ่งมีอำนาจตามกฎหมาย
+            การการที่ธนาคารขอสำเนาบัตรประชาชนเพื่อพิสูจน์ตัวตนของผู้ใช้บริการตามกฎหมายว่าด้วยการป้องกันและปราบปรามการฟอกเงิน
+          </li>
+          <li>ฐานประโยชน์สำคัญต่อชีวิต (Vital Interest)
+            โดยจะสามารถใช้ฐานนี้ในการประมวลผลข้อมูลสุขภาพที่เป็นข้อมูลอ่อนไหว (Censitive data)
+            เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย สุขภาพ
+            ซึ่งจะใช้ฐานนี้ได้เฉพาะในกรณีที่เจ้าของข้อมูลอยู่ในสภาวะที่ไม่สามารถให้ความยินยอมได้ ตัวอย่างเช่น
+            แพทย์ขอใช้ประวัติการรักษาของเจ้าของข้อมูลจากโรงพยาบาลเพื่อทำการรักษาเจ้าของข้อมูลซึ่งเป็นผู้ป่วย
+            สาธารณสุขจังหวัดขอเก็บข้อมูลการติดเชื้อของประชาชนในพื้นที่เพื่อเฝ้าระวังป้องกันโรคระบาด
+          </li>
+          <li>ฐานภารกิจของรัฐ (Public Task) เป็นการใช้อำนาจรัฐเพื่อปฏิบัติหน้าที่ตามที่ได้รับมอบหมาย
+            ผู้ควบคุมข้อมูลส่วนบุคคลในฐานนี้มักเป็นพนักงานเจ้าหน้าที่ของรัฐหรือหน่วยงานเอกชนที่มีอำนาจตามที่กำหนดไว้ในกฎหมาย
+            เช่น ตำรวจมีอำนาจในการปรับ จับกุมหรือขอข้อมูลที่เกี่ยวข้องกับคดีตามกฎหมายอาญา
+            โรงเรียนสอนขับรถยนต์ที่กรมการขนส่งทางบกได้ให้อำนาจให้บริการสอบใบอนุญาตขับขี่รถยนต์
+          </li>
+          <li>ฐานประโยชน์อันชอบธรรม (Legitimate Interest)
+            เป็นการดำเนินการที่จำเป็นเพื่อประโยชน์อันชอบด้วยกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคลหรือบุคคลภายนอก
+            แต่การดำเนินการนั้นจะต้องไม่ละเมิดสิทธิขั้นพื้นฐานของเจ้าของข้อมูลส่วนบุคคล
+            และเจ้าของข้อมูลก็คาดหมายได้ว่าจะมีการดำเนินการนี้ ตัวอย่างเช่น การประเมินการขึ้นเงินเดือนพนักงาน
+            การรวบรวมสถิติโดยไม่ใช้ข้อมูลที่บ่งชี้ตัวตนของเจ้าของข้อมูล
+            การบันทึกภาพกล้องวงจรปิดในสถานที่สาธารณะ
+          </li>
+          <li>ฐานจดหมายเหตุ วิจัย สถิติ (Scientific or Research)
+            การปฏิบัติตามฐานนี้อาจต้องอ้างอิงฐานตามกฎหมายอื่นประกอบด้วยว่าจะขอจัดเก็บข้อมูลเพื่อจัดทำเอกสารประวัติศาสตร์
+            จดหมายเหตุ วิจัย สถิติ ตามวัตถุประสงค์หลักใด เช่น ขอเก็บตามฐานภารกิจของรัฐ (Public Task)
+            ฐานการปฏิบัติตามกฎหมาย (Legal Obligation) หรืออาจต้องอาศัยการตัดสินใจตามฐานความยินยอม (Consent)
+            กับเจ้าของข้อมูล
+          </li>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="center">
+          <span class="close">
+            <button class="btn-consen" onclick="check_1()" id="btn">ยอมรับ</button>
+            <button class="btn-consen" onclick="uncheck_1()" id="btn">ปฏิเสธ</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal2" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4>การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลที่อ่อนไหว (Sensitive Personal Data)</h4>
+      </div>
+      <div class="modal-body">
+        <div class="detail">
+          สำหรับการใช้ข้อมูลส่วนบุคคลที่อ่อนไหว เช่น ลายนิ้วมือ ประวัติการรักษา เทคโนโลยีจดจำใบหน้า (Facial Recognition)
+          จะต้องใช้ตามวัตถุประสงค์ที่แจ้งไว้แต่แรกและต้องขอ consent ทุกครั้ง
+          โดยการขอใช้หรือเก็บรวบรวมข้อมูลจะต้องมีความได้สัดส่วนและจำเป็น กล่าวคือ การใช้ข้อมูลส่วนบุคคลที่อ่อนไหว
+          จะใช้ได้ต่อเมื่อไม่สามารถใช้ข้อมูลส่วนบุคคลทั่วไปทดแทนได้ ตัวอย่างเช่น
+          การเก็บข้อมูลลายนิ้วมือของสมาชิกฟิตเนสเพื่อใช้ยืนยันตัวตนสมาชิก
+          อาจเกินความจำเป็นเนื่องจาก ทางฟิตเนสสามารถใช้บัตรสมาชิกในการสแกนเข้าออกฟิตเนสแทนได้
+          กฎหมาย PDPA ได้ให้ข้อยกเว้นที่ไม่ต้องขอความยินยอม (Consent) ในบางกรณีได้ ตัวอย่างเช่น
+
+          <li>เมื่อมีเหตุจำเป็นเร่งด่วนเพื่อป้องกันหรือระงับอันตรายต่อชีวิต (Vital interest) ตัวอย่างเช่น
+            เมื่อเจ้าของข้อมูลเกิดเหตุฉุกเฉินไม่รู้สึกตัว เจ้าหน้าที่กู้ชีพสามารถขอข้อมูลสุขภาพกับบุคคลใกล้ชิดได้
+            หรือโรงพยาบาลสามารถให้ประวัติการรักษากับอีกโรงพยาบาลหนึ่งเพื่อช่วยเหลือผู้ป่วยที่ประสบอุบัติเหตุที่หมดสติได้
+          </li>
+          <li>การดำเนินกิจกรรมโดยชอบด้วยกฎหมายที่มีการคุ้มครองที่เหมาะสมของมูลนิธิ สมาคม หรือองค์กรที่ไม่แสวงหากำไร
+            ที่มีวัตถุประสงค์เกี่ยวกับการเมือง ศาสนา ปรัชญา หรือสหภาพแรงงาน
+          </li>
+          <li>ข้อมูลที่เปิดเผยต่อสาธารณะด้วยความยินยอมโดยชัดแจ้งของเจ้าของข้อมูลส่วนบุคคล
+          </li>
+          <li>การก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย
+            หรือการยกขึ้นต่อสู้สิทธิเรียกร้องตามกฎหมาย
+          </li>
+          <li>เพื่อประโยชน์สาธารณะ เช่น การขอข้อมูลสุขภาพและ timeline จากกลุ่มบุคคลเสี่ยงต่อโรคติดต่อหรือโรคระบาด
+            เพื่อป้องกันการติดต่อหรือแพร่เข้ามาในราชอาณาจักร
+          </li>
+          <li>การคุ้มครองแรงงาน การประกันสังคม หลักประกันสุขภาพแห่งชาติ
+            สวัสดิการเกี่ยวกับการรักษาพยาบาลของผู้มีสิทธิตามกฎหมาย การคุ้มครองผู้ประสบภัยจากรถ เช่น ฝ่าย HR
+            ใช้ใบรับรองแพทย์ของเจ้าของข้อมูลเพื่อเป็นหลักฐานในการเบิกจ่ายค่ารักษาพยาบาลกับประกันสังคม
+          </li>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="center">
+          <span class="close">
+            <button class="btn-consen" onclick="check_2()" id="btn">ยอมรับ</button>
+            <button class="btn-consen" onclick="uncheck_2()" id="btn">ปฏิเสธ</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal3" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4>การใช้ฐานการประมวลผลข้อมูลส่วนบุคคลทั่วไป</h4>
+      </div>
+      <div class="modal-body">
+        <div class="detail">
+          พิจารณาได้จากรูปแบบการดำเนินการ และวัตถุประสงค์การใช้ เก็บรวบรวมหรือเปิดเผยข้อมูลนั้น
+          ซึ่งในแต่ละชุดข้อมูลก็มีรายละเอียดที่แตกต่างกัน ทั้งนี้ โดยหลักการตามกฎหมาย PDPA
+          ระบุว่าให้ใช้ฐานความยินยอม (Consent) เป็นฐานหลักในการประมวลผลข้อมูล
+          เนื่องจากเปิดโอกาสให้เจ้าของข้อมูลส่วนบุคคลสามารถเลือกจัดการข้อมูลของตนเองได้เต็มที่
+          ในทางปฏิบัติแล้วผู้ควบคุมข้อมูลส่วนบุคคลอาจไม่สามารถใช้ฐานความยินยอม (Consent)
+          กับการขอใช้หรือเก็บรวบรวมกับข้อมูลทุกประเภทได้
+          ซึ่งองค์กรแต่ละประเภทย่อมมีความจำเป็นในการอ้างอิงฐานตามกฎหมายแตกต่างกันไปตามลักษณะของธุรกรรมที่เกี่ยวข้องกับข้อมูลส่วนบุคคล
+          โดยกฎหมาย PDPA
+          ยังมีวิธีการประมวลผลตามฐานกฎหมายอื่นที่สามารถปรับใช้ตามบริบทและวัตถุประสงค์ ได้แก่ ฐานสัญญา (Contract),
+          ฐานหน้าที่ตามกฎหมาย (Legal Obligation), ฐานประโยชน์สำคัญต่อชีวิต (Vital Intertest),
+          ฐานภารกิจของรัฐ (Public Task), ฐานประโยชน์อันชอบธรรม (Legitimate Interest), ฐานจดหมายเหตุ วิจัย สถิติ
+          (Scientific or Research) หากวัตถุประสงค์การใช้
+          เก็บรวบรวมหรือเปิดเผยข้อมูลเข้าตามฐานการประมวลผล 5 ฐานนี้ ผู้ควบคุมข้อมูลส่วนบุคคลก็ไม่ต้องขอความยินยอม
+          (Consent) จากเจ้าของข้อมูลอีก
+          ฐานการประมวลผลข้อมูลตามกฎหมาย (Lawful Basis) ของข้อมูลส่วนบุคคลทั่วไปที่ไม่ต้องขอความยินยอม (consent)
+          มีดังนี้<br>
+
+          <li>ฐานสัญญา (Contract) จะใช้ได้กับข้อมูลส่วนบุคคลทั่วไปเท่านั้น
+            ฐานนี้เป็นการปฏิบัติตามสัญญาระหว่างผู้ควบคุมข้อมูลกับเจ้าของข้อมูลส่วนบุคคล
+            สัญญาตามฐานนี้จะทำเป็นลายลักษณ์อักษรหรือไม่เป็นลายลักษณ์อักษรก็ได้ ตัวอย่างเช่น
+            สัญญาเปิดบัญชีธนาคารและการให้บริการกับลูกค้าของธนาคาร
+            การสมัครสมาชิกฟิตเนสและการให้บริการด้านการออกกำลังกายกับสมาชิกฟิตเนส
+            การปฏิบัติตามสัญญาซื้อขายโดยเว็บไซต์ E-commerce เก็บรวบรวมที่อยู่จัดส่งของผู้ซื้อให้กับร้านค้าเพื่อส่งสินค้า
+          </li>
+          <li>ฐานหน้าที่ตามกฎหมาย (Legal Obligation) เป็นสิ่งที่ผู้ควบคุมข้อมูลส่วนบุคคลต้องปฏิบัติตามกฎหมาย
+            เนื่องจากเป็นเรื่องที่กฎหมายกำหนดไว้ชัดเจนว่าต้องปฏิบัติตาม
+            เช่น การให้สิทธิลูกจ้างลาป่วยหรือลาพักผ่อนตามกฎหมายแรงงาน
+            การให้ข้อมูลกับหน่วยงานหรือพนักงานเจ้าหน้าที่ของรัฐซึ่งมีอำนาจตามกฎหมาย
+            การการที่ธนาคารขอสำเนาบัตรประชาชนเพื่อพิสูจน์ตัวตนของผู้ใช้บริการตามกฎหมายว่าด้วยการป้องกันและปราบปรามการฟอกเงิน
+          </li>
+          <li>ฐานประโยชน์สำคัญต่อชีวิต (Vital Interest)
+            โดยจะสามารถใช้ฐานนี้ในการประมวลผลข้อมูลสุขภาพที่เป็นข้อมูลอ่อนไหว (Censitive data)
+            เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย สุขภาพ
+            ซึ่งจะใช้ฐานนี้ได้เฉพาะในกรณีที่เจ้าของข้อมูลอยู่ในสภาวะที่ไม่สามารถให้ความยินยอมได้ ตัวอย่างเช่น
+            แพทย์ขอใช้ประวัติการรักษาของเจ้าของข้อมูลจากโรงพยาบาลเพื่อทำการรักษาเจ้าของข้อมูลซึ่งเป็นผู้ป่วย
+            สาธารณสุขจังหวัดขอเก็บข้อมูลการติดเชื้อของประชาชนในพื้นที่เพื่อเฝ้าระวังป้องกันโรคระบาด
+          </li>
+          <li>ฐานภารกิจของรัฐ (Public Task) เป็นการใช้อำนาจรัฐเพื่อปฏิบัติหน้าที่ตามที่ได้รับมอบหมาย
+            ผู้ควบคุมข้อมูลส่วนบุคคลในฐานนี้มักเป็นพนักงานเจ้าหน้าที่ของรัฐหรือหน่วยงานเอกชนที่มีอำนาจตามที่กำหนดไว้ในกฎหมาย
+            เช่น ตำรวจมีอำนาจในการปรับ จับกุมหรือขอข้อมูลที่เกี่ยวข้องกับคดีตามกฎหมายอาญา
+            โรงเรียนสอนขับรถยนต์ที่กรมการขนส่งทางบกได้ให้อำนาจให้บริการสอบใบอนุญาตขับขี่รถยนต์
+          </li>
+          <li>ฐานประโยชน์อันชอบธรรม (Legitimate Interest)
+            เป็นการดำเนินการที่จำเป็นเพื่อประโยชน์อันชอบด้วยกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคลหรือบุคคลภายนอก
+            แต่การดำเนินการนั้นจะต้องไม่ละเมิดสิทธิขั้นพื้นฐานของเจ้าของข้อมูลส่วนบุคคล
+            และเจ้าของข้อมูลก็คาดหมายได้ว่าจะมีการดำเนินการนี้ ตัวอย่างเช่น การประเมินการขึ้นเงินเดือนพนักงาน
+            การรวบรวมสถิติโดยไม่ใช้ข้อมูลที่บ่งชี้ตัวตนของเจ้าของข้อมูล
+            การบันทึกภาพกล้องวงจรปิดในสถานที่สาธารณะ
+          </li>
+          <li>ฐานจดหมายเหตุ วิจัย สถิติ (Scientific or Research)
+            การปฏิบัติตามฐานนี้อาจต้องอ้างอิงฐานตามกฎหมายอื่นประกอบด้วยว่าจะขอจัดเก็บข้อมูลเพื่อจัดทำเอกสารประวัติศาสตร์
+            จดหมายเหตุ วิจัย สถิติ ตามวัตถุประสงค์หลักใด เช่น ขอเก็บตามฐานภารกิจของรัฐ (Public Task)
+            ฐานการปฏิบัติตามกฎหมาย (Legal Obligation) หรืออาจต้องอาศัยการตัดสินใจตามฐานความยินยอม (Consent)
+            กับเจ้าของข้อมูล
+          </li>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="center">
+          <span class="close">
+            <button class="btn-consen" onclick="check_3()" id="btn">ยอมรับ</button>
+            <button class="btn-consen" onclick="uncheck_3()" id="btn">ปฏิเสธ</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </main>
+</body>
+
+</html>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  const txt = '{"card":"01", "account":"a01", "contact":"c01","id":"id01", "scheme":"s01","name":"สุขใจ มีสุข", "address":"162 ต.นนน อ.เมือง จ.กรุงเทพฯ","phone":"0845649155", "email":"suujai@hotmail.com", "bdate":"10/05/1999"}'
+  const obj = JSON.parse(txt);
+  document.getElementById("card").innerHTML = obj.card;
+  document.getElementById("account").innerHTML = obj.account;
+  document.getElementById("contact").innerHTML = obj.contact;
+  document.getElementById("id").innerHTML = obj.id;
+  document.getElementById("scheme").innerHTML = obj.scheme;
+  document.getElementById("name").value = obj.name;
+  document.getElementById("phone").value = obj.phone;
+  document.getElementById("email").value = obj.email;
+
+
+  function onSubmit(form) {
+    var data = JSON.stringify($(form).serializeArray());
+
+    console.log(data);
+    return false; 
+  }
+
+
+
+  function check_1() {
+    document.getElementById("myCheck_1").checked = true;
+  }
+
+  function uncheck_1() {
+    document.getElementById("myCheck_1").checked = false;
+  }
+
+  function check_2() {
+    document.getElementById("myCheck_2").checked = true;
+  }
+
+  function uncheck_2() {
+    document.getElementById("myCheck_2").checked = false;
+  }
+
+  function check_3() {
+    document.getElementById("myCheck_3").checked = true;
+  }
+
+  function uncheck_3() {
+    document.getElementById("myCheck_3").checked = false;
+  }
+  // Get the button that opens the modal
+  var btn = document.querySelectorAll("a.modal-button");
+
+  // All page modals
+  var modals = document.querySelectorAll('.modal');
+
+  // Get the <span> element that closes the modal
+  var spans = document.getElementsByClassName("close");
+
+  // When the user clicks the button, open the modal
+  for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function (e) {
+      e.preventDefault();
+      modal = document.querySelector(e.target.getAttribute("href"));
+      modal.style.display = "block";
+    }
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  for (var i = 0; i < spans.length; i++) {
+    spans[i].onclick = function () {
+      for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+      }
+    }
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target.classList.contains('modal')) {
+      for (var index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+      }
+    }
+  }
+</script>
+
+</script>
