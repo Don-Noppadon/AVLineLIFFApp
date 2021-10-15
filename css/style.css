@@ -6,10 +6,7 @@ body {
 }
 div#area{
   background-color: #ffff;
-  height: 100%;
-}
-div#area_user_data{
-  background-color: #ffff;
+   height: 100%; 
 }
 
 /* ภาพผู้ใช้ไลน์ */
@@ -210,9 +207,11 @@ select#day {
 
 /* ตำแหน่งกลาง */
 .center {
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6px;
 }
 
 /* พื้นที่แสดง contact  */
