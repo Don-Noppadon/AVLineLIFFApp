@@ -1,337 +1,319 @@
 /* พื้นหลัง */
-
 body {
-    background-color: #ffff;
-    /* สีพื้นหลัง */
+  background-color: rgb(145, 145, 145);  /* สีพื้นหลัง */
+  margin: auto;
+  max-width: 500px;
 }
-
-main {
-    max-width: 40rem;
-    margin: 0 auto;
-    /*
-    border-radius: 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    */
+div#area{
+  background-color: #ffff;
+  height: 100%;
 }
-
-.picture_user {
-    width: 40%;
-    height: 160;
+div#area_user_data{
+  background-color: #ffff;
 }
-
 
 /* ภาพผู้ใช้ไลน์ */
-
-
-/*
 #pictureUrl {
-    margin-top: 12px;
-    margin: 12px auto 12px;
-    width: 120px;
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    box-pack: center;
-    box-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  display: block;
+  margin:  auto;
+  width: 40%; /* ขนาดรูป */
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  box-pack: center;
+  box-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  /* ลักษณะของเงา */
 }
-*/
-
-#pictureUrl {
-    margin-top: 12px;
-    margin: 12px auto 12px;
-    width: 120px;
-    --height: 240px;
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    box-pack: center;
-    box-align: center;
-    -moz-border-radius: 256px;
-    -webkit-border-radius: 256px;
-    border-radius: 256px;
-}
-
 
 /* ช่องใส่ข้อมูลผู้ใช้ */
-
-input[type='text'] {
-    width: 90%;
-    /* ความกว้าง */
-    height: 30px;
-    /* ความสูง */
-    margin: 8px 0;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    /* ความโค้ง */
-    box-sizing: border-box;
+input[type="text"] {
+  width: 100%; /* ความกว้าง */
+  height: 30px; /* ความสูง */
+  margin: 8px 0;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* ความโค้ง */
+  box-sizing: border-box;
 }
 
-input[type='number'] {
-    width: 90%;
-    /* ความกว้าง */
-    height: 30px;
-    /* ความสูง */
-    padding: 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    /* สีกรอบ */
-    border-radius: 4px;
-    /* ความโค้ง */
-    box-sizing: border-box;
+input[type="number"] {
+  width: 100%; /* ความกว้าง */
+  height: 30px; /* ความสูง */
+  padding: 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;  /* สีกรอบ */
+  border-radius: 4px; /* ความโค้ง */
+  box-sizing: border-box;
 }
 
-input[type='email'] {
-    width: 90%;
-    /* ความกว้าง */
-    height: 30px;
-    /* ความสูง */
-    padding: 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    /* สีกรอบ */
-    border-radius: 4px;
-    /* ความโค้ง */
-    box-sizing: border-box;
+input[type="email"] {
+  width: 100%; /* ความกว้าง */
+  height: 30px; /* ความสูง */
+  padding: 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc; /* สีกรอบ */
+  border-radius: 4px; /* ความโค้ง */
+  box-sizing: border-box;
 }
 
 select {
-    width: 29%;
-    /* ความกว้าง */
-    height: 30px;
-    /* ความสูง */
-    padding: 5px;
-    margin: 8px 2px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    /* สีกรอบ */
-    border-radius: 4px;
-    /* ความโค้ง */
-    box-sizing: border-box;
-    background-color: #ffffff;
+  width: 36%; /* ความกว้าง */
+  height: 30px; /* ความสูง */
+  padding: 5px;
+  margin: 8px 1px;
+  display: inline-block;
+  border: 1px solid #ccc; /* สีกรอบ */
+  border-radius: 4px; /* ความโค้ง */
+  box-sizing: border-box;
+  background-color: #ffffff;/* สีพื้นหลัง */
+}
+
+select#day {
+  width: 20%; /* ความกว้าง */
+  height: 30px; /* ความสูง */
+  padding: 5px;
+  margin: 8px 1px;
+  display: inline-block;
+  border: 1px solid #ccc; /* สีกรอบ */
+  border-radius: 4px; /* ความโค้ง */
+  box-sizing: border-box;
+  background-color: #ffffff;/* สีพื้นหลัง */
 }
 
 
 /* ปุ่ม */
-
 .button {
-    background-color: #3a2f8f;
-    border: none;
-    width: 115px;
-    border-radius: 6px;
-    color: white;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* ลักษณะของเงา */
-    box-sizing: content-box;
-    height: 40px;
+  background-color: #3a2f8f;/* สีพื้นหลัง */
+  border: none;
+  width: 115px;
+  border-radius: 6px;
+  color: white;/* สีตัวอักษร */
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ลักษณะของเงา */
+  box-sizing: content-box;
+  height: 40px;
 }
-
+/* ปุ่มเคลื่อนไหว */
 .button:active {
-    background: #302675;
-    transform: translateY(4px);
-    transform: translateX(4px);
+  background: #302675;/* สีพื้นหลัง */
+  transform: translateY(4px);
+  transform: translateX(4px);
 }
 
-.btn-consen {
-    background-color: #3a2f8f;
-    border: none;
-    width: 90px;
-    border-radius: 6px;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* ลักษณะของเงา */
-    box-sizing: content-box;
-    height: 20px;
+/* ปุ่ม modal */
+.btn-consent{
+  background-color: #3a2f8f;/* สีพื้นหลัง */
+  border: none;
+  width: 90px;
+  border-radius: 6px;
+  color: white;/* สีตัวอักษร */
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ลักษณะของเงา */
+  box-sizing: content-box;
+  height: 20px;
+}
+/* ปุ่มเคลื่อนไหว */
+.btn-consent:active {
+  background: #302675;/* สีพื้นหลัง */
+  transform: translateY(4px);
+  transform: translateX(4px);
 }
 
-.btn-consen:active {
-    background: #302675;
-    transform: translateY(4px);
-    transform: translateX(4px);
+#btnlogOut{
+  background-color: #3a2f8f;/* สีพื้นหลัง */
+  border: none;
+  width: 115px;
+  border-radius: 6px;
+  color: white;/* สีตัวอักษร */
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ลักษณะของเงา */
+  box-sizing: content-box;
+  height: 40px;
 }
 
-
+#btnlogOut:active {
+  background: #302675;/* สีพื้นหลัง */
+  transform: translateY(4px);
+  transform: translateX(4px);
+}
 /* ลักษณะของข้อผู้ใช้ */
-
 .user_data {
-    background: #ffffff;
-    padding: 2px;
-    /* color: white; */
-    width: 85%;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #ffffff;/* สีพื้นหลัง */
+  padding: 2px;
+  /* color: white; */
+  width: 85%;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ลักษณะของเงา */
 }
-
-.consen {
-    font-size: 14px;
-    width: 80%;
+/* consent  */
+.consent {
+  font-size: 14px;
+  width: 80%;
 }
-
-.contact {
-    font-size: 14px;
-    width: 80%;
+/* data modal  */
+.detail {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 75%;
+  overflow: auto;
 }
-
+/* title ข้อมูลส่วนตัว  */
 .title {
-    font-weight: bold;
-    font-size: 16px;
-    color: black;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;/* สีตัวอักษร */
+  margin: 4px;
 }
-
+/* data ข้อมูลส่วนตัว  */
 .data {
-    font-size: 16px;
-    color: black;
+  font-size: 16px;
+  color: black;/* สีตัวอักษร */
 }
-
+/* head แต่ละหน้า */
 .head {
-    width: 85%;
-    font-size: 16px;
-    font-weight: bold;
-    background: #3a2f8f;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* ลักษณะของเงา */
+  width: 85%;
+  font-size: 16px;
+  font-weight: bold;
+  background: #3a2f8f;/* สีพื้นหลัง */
+  color: white;/* สีตัวอักษร */
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* ลักษณะของเงา */
 }
-
 
 /* ตำแหน่งกลาง */
-
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* พื้นที่แสดง contact  */
+.contact {
+  font-size: 14px;
+  width: 80%;
+}
+/* topic contact  */
 .topic {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
-
+/* text  contact  */
 .text {
-    text-align: center;
+  text-align: center;
 }
-
+/* icon_contact  */
 .icon_contact {
-    font-size: 30px;
-    color: #3e2093;
-    padding: 14px;
-}
-
-.i {
-    display: inline-block;
-}
-
-.detail {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 75%;
-    overflow: auto;
+  font-size: 30px;
+  color: #3e2093;/* สีพื้นหลัง */
+  padding: 14px;
 }
 
 
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 20px;
+  /* The Modal (background) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 20px; 
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); /* สีพื้นหลัง */
+    background-color: rgba(0,0,0,0.4); /* สีพื้นหลัง */
 }
 
-
 /* Modal Content */
-
 .modal-content {
+  max-width: 500px;
     position: relative;
-    background-color: #fefefe;
+    background-color: #fefefe;/* สีพื้นหลัง */
     margin: auto;
     padding: 0;
     border: 1px solid #888;
     width: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);/* ลักษณะของเงา */
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.1s;
+    animation-duration: 0.1s
 }
 
-
 /* Add Animation */
-
 @-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
 
 @keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
+
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #302675;
-    color: white;
+    background-color: #302675;/* สีพื้นหลัง */
+    color: white;/* สีตัวอักษร */
 }
 
 .modal-body {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
 .modal-footer {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
     padding: 2px 16px;
-    background-color: #ffffff;
-    color: white;
+    background-color: #ffffff;/* สีพื้นหลัง */
+    color: white;/* สีตัวอักษร */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

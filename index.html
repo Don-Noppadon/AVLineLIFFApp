@@ -1,116 +1,91 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
-    <title>My LIFF App</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+  <title>My LIFF App</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <main>
+  <div id="area">
+    <!-- Logo -->
+    <div class="center">
+      <img src="logo/logo.png" width="90%" height="140" />
+    </div>
+    <br>
+
+    <!-- Head  -->
+    <div class="center">
+      <div class="head">
+        <p>Avision LIFF</p>
+      </div>
+    </div>
+    <br>
+
+    <!-- Line Picture -->
+    <div class="center">
+
+      <img id="pictureUrl" />
+
+    </div>
+    <br>
+
+    <!-- การ์ดข้อมูลส่วนตัว -->
+    <div class="center">
+      <div class="user_data">
         <div>
-            <!-- Logo -->
-            <div class="center">
-                <img src="https://www.avision.co.th/2013/images/Logo10.jpg" width="90%" height="140" />
-            </div>
-            <br />
-
-            <!-- Head  -->
-            <div class="center">
-                <div class="head">
-                    <p>Avision LIFF</p>
-                </div>
-            </div>
-
-            <!-- Line Picture -->
-            <div class="center">
-                <div class="picture_user">
-                    <img id="pictureUrl" />
-                </div>
-            </div>
-
-            <!-- การ์ดข้อมูลส่วนตัว -->
-            <div class="center">
-                <div class="user_data">
-                    <div>
-                        <table style="width: 100%">
-                            <tr>
-                                <td colspan="2" class="title" style="text-align: center">
-                                    ข้อมูลส่วนตัว
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="title" style="width: 40%">ชื่อ-นามสกุล</td>
-                                <td class="data" style="width: 60%">สุขใจ มีสุข</td>
-                            </tr>
-                            <tr>
-                                <td class="title" style="width: 40%">วันเดือนปีเกิด</td>
-                                <td class="data" style="width: 60%">12 กันยายน 1956</td>
-                            </tr>
-                            <tr>
-                                <td class="title" style="width: 40%">เบอร์โทรศัพท์</td>
-                                <td class="data" style="width: 60%">0845649155</td>
-                            </tr>
-                            <tr>
-                                <td class="title" style="width: 40%">อีเมล</td>
-                                <td class="data" style="width: 60%">suujai@hotmail.com</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <br />
-
-            <!-- ปุ่ม -->
-            <div>
-                <div class="center">
-                    <button class="button" onclick="location.href='user_data.html'">
-              จัดการข้อมูลสมาชิก
-            </button>
-                    <button class="button">โปรโมชั่น</button>
-                </div>
-                <div class="center">
-                    <button class="button">แลกพอยท์</button>
-                    <button class="button" onclick="location.href='contact.html'">
-              ติดต่อ
-            </button>
-                </div>
-            </div>
+          <table style="width: 100%">
+            <tr>
+              <td colspan="2" class="title" style="text-align: center;">ข้อมูลส่วนตัว</td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">ชื่อ-นามสกุล</td>
+              <td class="data" style="width: 60%" id="name"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">วันเดือนปีเกิด</td>
+              <td class="data" style="width: 60%" id="bdate">
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">เบอร์โทรศัพท์</td>
+              <td class="data" style="width: 60%" id="phone"></td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">อีเมล</td>
+              <td class="data" style="width: 60%">
+                <p id="getDecodedIDToken"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="title" style="width: 40%">ชื่อบัญชีผู้ใช้ไลน์</td>
+              <td class="data" style="width: 60%">
+                <p id="displayName"></p>
+              </td>
+            </tr>
+          </table>
         </div>
-    </main>
+      </div>
+    </div>
+    <br>
+
+    <!-- button -->
+    <div>
+      <div class="center">
+        <button class="button" onclick="location.href='user_data.html'">จัดการข้อมูลสมาชิก</button>
+        <button class="button" onclick="location.href='contact.html'">ติดต่อ</button>
+      </div>
+      <div class="center">
+        <div id="button-logOut"></div>
+
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
+
+
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-<script>
-    // ตรวจสอบการเข้าถึงผ่านไลน์
-    async function main() {
-        liff.ready.then(() => {
-            //alert('ready');
-            //alert(liff.getOS());
-            if (liff.isInClient()) {
-                getUserProfile();
-            } else {
-                if (liff.isLoggedIn()) {
-                    //alert('login');
-                    getUserProfile();
-                } else {
-                    //alert('wait ready');
-                    liff.login();
-                }
-            }
-        });
-        await liff.init({
-            liffId: '1655050259-lnja5368',
-        }); //LIFF ID
-    }
-
-    async function getUserProfile() {
-        const profile = await liff.getProfile();
-        document.getElementById('pictureUrl').src = profile.pictureUrl; //รูปภาพไลน์ของผู้ใช้งาน
-        document.getElementById('decodedIDToken'); //IDToken Line User
-    }
-
-    main();
-</script>
+<script src="liff.js"></script>
