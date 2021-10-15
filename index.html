@@ -1,84 +1,83 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
-  <title>My LIFF App</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover" />
+    <title>My LIFF App</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div id="area">
-    <!-- Logo -->
-    <div class="center">
-      <img src="logo/logo.png" width="90%" height="140" />
-    </div>
-    
-
-    <!-- Head  -->
-    <div class="center">
-      <div class="head">
-        <p>Avision LIFF</p>
-      </div>
-    </div>
-   
-
-    <!-- Line Picture -->
-    <div class="center">
-      <img id="pictureUrl" />
-    </div>
-    
-
-    <!-- การ์ดข้อมูลส่วนตัว -->
-    <div class="center">
-      <div class="user_data">
-        <div>
-          <table style="width: 100%">
-            <tr>
-              <td colspan="2" class="title" style="text-align: center;">ข้อมูลส่วนตัว</td>
-            </tr>
-            <tr>
-              <td class="title" style="width: 40%">ชื่อ-นามสกุล</td>
-              <td class="data" style="width: 60%" id="name"></td>
-            </tr>
-            <tr>
-              <td class="title" style="width: 40%">วันเดือนปีเกิด</td>
-              <td class="data" style="width: 60%" id="bdate">
-            </tr>
-            <tr>
-              <td class="title" style="width: 40%">เบอร์โทรศัพท์</td>
-              <td class="data" style="width: 60%" id="phone"></td>
-            </tr>
-            <tr>
-              <td class="title" style="width: 40%">อีเมล</td>
-              <td class="data" style="width: 60%">
-                <p id="getDecodedIDToken"></p>
-              </td>
-            </tr>
-            <tr>
-              <td class="title" style="width: 40%">ชื่อบัญชีผู้ใช้ไลน์</td>
-              <td class="data" style="width: 60%">
-                <p id="displayName"></p>
-              </td>
-            </tr>
-          </table>
+    <div id="area">
+        <!-- Logo -->
+        <div class="center">
+            <img src="logo/logo.png" width="90%" height="140" />
         </div>
-      </div>
-    </div>
-    
 
-    <!-- button -->
-    <div>
-      <div class="center">
-        <button class="button" onclick="location.href='user_data.html'">จัดการข้อมูลสมาชิก</button>
-        <button class="button" onclick="location.href='contact.html'">ติดต่อ</button>
-      </div>
-      <div class="center">
-        <div id="button-logOut"></div>
-      </div>
+
+        <!-- Head  -->
+        <div class="center">
+            <div class="head">
+                <p>Avision LIFF</p>
+            </div>
+        </div>
+
+
+        <!-- Line Picture -->
+        <div class="center">
+            <img id="pictureUrl" />
+        </div>
+
+
+        <!-- การ์ดข้อมูลส่วนตัว -->
+        <div class="center">
+            <div class="user_data">
+                <div>
+                    <table style="width: 100%">
+                        <tr>
+                            <td colspan="2" class="title" style="text-align: center;">ข้อมูลส่วนตัว</td>
+                        </tr>
+                        <tr>
+                            <td class="title" style="width: 40%">ชื่อ-นามสกุล</td>
+                            <td class="data" style="width: 60%" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td class="title" style="width: 40%">วันเดือนปีเกิด</td>
+                            <td class="data" style="width: 60%" id="bdate">
+                        </tr>
+                        <tr>
+                            <td class="title" style="width: 40%">เบอร์โทรศัพท์</td>
+                            <td class="data" style="width: 60%" id="phone"></td>
+                        </tr>
+                        <tr>
+                            <td class="title" style="width: 40%">อีเมล</td>
+                            <td class="data" style="width: 60%">
+                                <p id="getDecodedIDToken"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title" style="width: 40%">ชื่อบัญชีผู้ใช้ไลน์</td>
+                            <td class="data" style="width: 60%">
+                                <p id="displayName"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- button -->
+        <div>
+            <div class="center">
+                <button class="button" onclick="location.href='user_data.html'">จัดการข้อมูลสมาชิก</button>
+                <button class="button" onclick="location.href='contact.html'">ติดต่อ</button>
+            </div>
+            <div class="center">
+                <div id="button-logOut"></div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>
