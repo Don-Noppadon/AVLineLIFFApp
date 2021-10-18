@@ -110,9 +110,9 @@
         const db = getDatabase(); 
         
         function Insertdata(){
-            set(ref(db,"/LIFFMember/11"),{ 
-                testname: "n1",
-                testaddr: "a1" 
+            set(ref(db,"/LIFFMember/"+document.getElementById("displayName").value),{ 
+                testname: document.getElementById("displayName").value,
+                testemail: document.getElementById("email").value 
             })
             .then(()=>{ 
                 alert("data success");
@@ -128,7 +128,7 @@
         function SelectData(){
             const dbref = ref(db);
 
-            get(child(dbref,"/LIFFMember/11")).then((snapshot)=>{
+            get(child(dbref,"/LIFFMember/"+document.getElementById("displayName").value)).then((snapshot)=>{
                 if(snapshot.exists()){
                     alert(snapshot.val().testname);
                 }else{
