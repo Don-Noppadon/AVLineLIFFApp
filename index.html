@@ -110,8 +110,8 @@
         const db = getDatabase(); 
         
         function Insertdata(){
-            set(ref(db,"/LIFFMember/"+document.getElementById("displayName").value),{ 
-                testname: document.getElementById("displayName").value,
+            set(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
+                testname: document.getElementById("displayName").innerHTML,
                 testemail: "test@gmail.com" 
             })
             .then(()=>{ 
@@ -126,11 +126,9 @@
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
 
         function SelectData(){
-            var dname = document.getElementById("displayName").innerHTML;
-            alert("Name 1 : "+dname);
             const dbref = ref(db);
 
-            get(child(dbref,"/LIFFMember/"+document.getElementById("displayName").value)).then((snapshot)=>{
+            get(child(dbref,"/LIFFMember/"+document.getElementById("displayName").innerHTML)).then((snapshot)=>{
                 if(snapshot.exists()){
                     alert(snapshot.val().testname);
                 }else{
