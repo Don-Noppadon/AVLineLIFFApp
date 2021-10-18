@@ -129,7 +129,7 @@
             const dbref = ref(db);
 
             get(child(dbref,"/LIFFMember/11")).then((snapshot)=>{
-                if(snapshot.exist()){
+                if(snapshot.exists()){
                     alert("Success Select Data");
                 }else{
                     alert("Not found")
