@@ -84,8 +84,8 @@
 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyBY3ySD-bHbUiv2sysGEJP-YiD65BHCgVU",
         authDomain: "avlineliff-a9c35.firebaseapp.com", projectId: "avlineliff-a9c35", storageBucket: "avlineliff-a9c35.appspot.com", messagingSenderId: "584951879654", appId: "1:584951879654:web:0272a2d048d906610ea827", measurementId: "G-LNTJHG61FM"
-        }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app); import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"; const db = getDatabase(); function Insertdata(){
-        set(ref(db,"/LIFFMember/testttt"),{ testname: "n1", testaddr: "a1" }).then(()=>{ alert("data success"); }) .catch((error)=>{ alert("Unsuccess,error"+error); }); } var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
+        }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app); import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database-lite.js"; const db = getDatabase(); function
+        Insertdata(){ set(ref(db,"/LIFFMember/testttt"),{ testname: "n1", testaddr: "a1" }).then(()=>{ alert("data success"); }) .catch((error)=>{ alert("Unsuccess,error"+error); }); } var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
     </script>
 </body>
 
