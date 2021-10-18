@@ -132,7 +132,7 @@
                 if(snapshot.exists()){
                     alert(snapshot.val().testname);
                 }else{
-                    alert("Not found")
+                    alert("Not found"+document.getElementById("displayName").value)
                 }
             }).catch((error)=>{ 
                 alert("Unsuccess,error"+error); 
