@@ -126,7 +126,7 @@
         function SelectData(){
             const dbref = ref(db);
 
-            get(child(dbref,"LIFFMember/dlYBiIUwqEOy6KyyYxXK")).then((snapshot)=>{
+            get(child(dbref,"LIFFMember/Address")).then((snapshot)=>{
                 if(snapshot.exist()){
                     alert(snapshot.val().Address);
                 }else{
