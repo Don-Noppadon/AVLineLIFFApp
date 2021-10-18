@@ -112,7 +112,7 @@
         function Insertdata(){
             set(ref(db,"/LIFFMember/"+document.getElementById("displayName").value),{ 
                 testname: document.getElementById("displayName").value,
-                testemail: document.getElementById("email").value 
+                testemail: "test@gmail.com" 
             })
             .then(()=>{ 
                 alert("data success");
