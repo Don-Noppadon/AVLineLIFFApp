@@ -126,7 +126,7 @@
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
 
         function SelectData(){
-            alert(document.getElementById("displayName").value);
+            alert(document.getElementById("displayName"));
             const dbref = ref(db);
 
             get(child(dbref,"/LIFFMember/"+document.getElementById("displayName").value)).then((snapshot)=>{
