@@ -121,8 +121,21 @@
             });            
         } 
 
-        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
+        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',SelectData);
 
+        function SelectData(){
+            const dbref = ref(db);
+
+            get(child(dbref,"LIFFMember/dlYBiIUwqEOy6KyyYxXK")).then((snapshot)=>{
+                if(snapshot.exist()){
+                    alert(snapshot.val().Address);
+                }else{
+                    alert("Not found")
+                }
+            }).catch((error)=>{ 
+                alert("Unsuccess,error"+error); 
+            }); 
+        }
 
       </script>
 </body>
