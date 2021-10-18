@@ -83,7 +83,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"; const firebaseConfig = { apiKey: "AIzaSyBclrUqov_q0KFXxdHBzIU73MOO3QKpPr8", authDomain: "avlifftestapp.firebaseapp.com", projectId: "avlifftestapp", storageBucket:
         "avlifftestapp.appspot.com", messagingSenderId: "561481536964", appId: "1:561481536964:web:19f4d2b101ab76eb074091" }; const app = initializeApp(firebaseConfig); import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
-        const db = getDatabase(); function Insertdata(){ set(ref(db,"/LIFFMember/testttt"),{ testname: "n1", testaddr: "a1" }).then(()=>{ alert("data success"); }) .catch((error)=>{ alert("Unsuccess,error"+error); }); } var InsBtn = document.getElementById("button-testInsert");
+        const db = getDatabase(); function Insertdata(){ set(ref(db,"LIFFMember/testttt"),{ testname: "n1", testaddr: "a1" }).then(()=>{ alert("data success"); }) .catch((error)=>{ alert("Unsuccess,error"+error); }); } var InsBtn = document.getElementById("button-testInsert");
         InsBtn.addEventListener('click',Insertdata);
     </script>
 </body>
