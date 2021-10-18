@@ -130,7 +130,7 @@
 
             get(child(dbref,"/LIFFMember/11")).then((snapshot)=>{
                 if(snapshot.exists()){
-                    alert("Success Select Data");
+                    alert(snapshot.val().testname);
                 }else{
                     alert("Not found")
                 }
