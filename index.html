@@ -76,6 +76,7 @@
             <div class="center">
                 <div id="button-logOut"></div>
                 <button class="button" id="button-testInsert">Test Insert</button>
+                <button class="button" id="button-testSelect">Test Insert</button>
             </div>
         </div>
     </div>
@@ -122,11 +123,12 @@
         } 
 
         var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
+        var SelBtn = document.getElementById("button-testSelect"); InsBtn.addEventListener('click',SelectData);
 
         function SelectData(){
             const dbref = ref(db);
 
-            get(child(dbref,"LIFFMember/Address")).then((snapshot)=>{
+            get(child(dbref,"/LIFFMember/11")).then((snapshot)=>{
                 if(snapshot.exist()){
                     alert(snapshot.val().Address);
                 }else{
