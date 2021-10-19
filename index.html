@@ -75,8 +75,14 @@
             </div>
             <div class="center">
                 <div id="button-logOut"></div>
+            </div>
+            <div class="center">
                 <button class="button" id="button-testInsert">Test Insert</button>
                 <button class="button" id="button-testSelect">Test Select</button>
+            </div>
+            <div class="center">
+                <button class="button" id="button-testUpdate">Test Update</button>
+                <button class="button" id="button-testDelete">Test Delete</button>
             </div>
         </div>
     </div>
@@ -109,35 +115,60 @@
         
         const db = getDatabase(); 
         
+        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
+        var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
+        var UpdBtn = document.getElementById("button-testUpdate"); SelBtn.addEventListener('click',UpdateData);
+        var DelBtn = document.getElementById("button-testDelete"); SelBtn.addEventListener('click',DeleteData);
+
         function Insertdata(){
             set(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
                 testname: document.getElementById("displayName").innerHTML,
                 testemail: "test1@gmail.com" 
             })
             .then(()=>{ 
-                alert("data success");
+                alert("Insert data success");
             })
             .catch((error)=>{ 
-                alert("Unsuccess,error"+error); 
+                alert("Insert data Unsuccess,error"+error); 
             });            
         } 
-
-        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
-        var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
-
+       
         function SelectData(){
             const dbref = ref(db);
 
             get(child(dbref,"/LIFFMember/"+document.getElementById("displayName").innerHTML)).then((snapshot)=>{
                 if(snapshot.exists()){
-                    alert(snapshot.val().testname);
+                    alert("Select data Success "+snapshot.val().testname);
                 }else{
-                    alert("Not found"+document.getElementById("displayName").value)
+                    alert("Select data Not found")
                 }
             }).catch((error)=>{ 
-                alert("Unsuccess,error"+error); 
+                alert("Select data Unsuccess,error"+error); 
             }); 
         }
+
+        function UpdateData(){
+            update(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
+                testname: document.getElementById("displayName").innerHTML,
+                testemail: "test2@gmail.com" 
+            })
+            .then(()=>{ 
+                alert("Update data success");
+            })
+            .catch((error)=>{ 
+                alert("Update data Unsuccess,error"+error); 
+            });            
+        } 
+
+        function DeleteData(){
+            remove(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML))
+            .then(()=>{ 
+                alert("Delete data success");
+            })
+            .catch((error)=>{ 
+                alert("Delete data Unsuccess,error"+error); 
+            });            
+        } 
 
       </script>
 </body>
