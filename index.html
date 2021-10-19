@@ -193,9 +193,9 @@
         } 
 
         async function CloudInsertdataCustomID(){
-            var ref = collection(dbStore,"LIFFMember","11");
+            var ref = collection(dbStore,"LIFFMember",document.getElementById("displayName").innerHTML);
 
-            const docRef = await addDoc(
+            const docRef = await setDoc(
                 ref,{
                     "Display Name": document.getElementById("displayName").innerHTML,
                     "E-Mail Address": "test1@gmail.com"
