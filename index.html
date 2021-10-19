@@ -225,7 +225,8 @@
             await updateDoc(
                 ref,{
                     "DisplayName": document.getElementById("displayName").innerHTML,
-                    "EmailAddress": document.getElementById("getDecodedIDToken").innerHTML+"test1"
+                    "EmailAddress": document.getElementById("getDecodedIDToken").innerHTML+"test1",
+                    "EmailAddress1": document.getElementById("getDecodedIDToken").innerHTML+"test2"
                 }
             )
             .then(()=>{ 
