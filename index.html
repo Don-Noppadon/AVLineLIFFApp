@@ -122,8 +122,8 @@
         
         var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',CloudInsertdataCustomID);
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',CloudSelectdata);
-        var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',UpdateData);
-        var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',DeleteData);
+        var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',CloudUpdatedata);
+        var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',CloudDeletedata);
 
         function Insertdata(){
             set(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
@@ -188,7 +188,7 @@
                 alert("Insert Cloud data success");
             })
             .catch((error)=>{ 
-                alert("Insert Cloud data Unsuccess,error"+error); 
+                alert("Insert Cloud data Unsuccess,error : "+error); 
             });             
         } 
 
@@ -205,7 +205,7 @@
                 alert("Insert Cloud data success");
             })
             .catch((error)=>{ 
-                alert("Insert Cloud data Unsuccess,error"+error); 
+                alert("Insert Cloud data Unsuccess,error : "+error); 
             });             
         } 
 
@@ -218,6 +218,39 @@
             }else{
                 alert("Select Cloud data not Found");
             }
+        } 
+
+        async function CloudUpdatedata(){
+            var ref = doc(dbStore,"LIFFMember",document.getElementById("displayName").innerHTML);
+            await updateDoc(
+                ref,{
+                    "DisplayName": document.getElementById("displayName").innerHTML,
+                    "EmailAddress": document.getElementById("getDecodedIDToken").innerHTML+"test1"
+                }
+            )
+            .then(()=>{ 
+                alert("Update Cloud data success");
+            })
+            .catch((error)=>{ 
+                alert("Update Cloud data Unsuccess,error : "+error); 
+            });  
+        } 
+
+        async function CloudDeletedata(){
+            var ref = doc(dbStore,"LIFFMember",document.getElementById("displayName").innerHTML);
+            const docSnap = await getDoc(ref);
+            
+            if(!docSnap.exists()){
+                alert("Delete Cloud data not found");
+            } 
+
+            await deleteDoc(ref)
+            .then(()=>{ 
+                alert("Delete Cloud data success");
+            })
+            .catch((error)=>{ 
+                alert("Delete Cloud data Unsuccess,error : "+error); 
+            });  
         } 
 
       </script>
