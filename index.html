@@ -112,10 +112,15 @@
 
         import {getDatabase, ref, get, set, child, update, remove} 
         from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"; 
+
+        import {getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField} 
+        from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"; 
+        
         
         const db = getDatabase(); 
+        const dbStore = getFirestore(); 
         
-        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
+        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',CloudInsertdata);
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
         var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',UpdateData);
         var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',DeleteData);
@@ -168,6 +173,23 @@
             .catch((error)=>{ 
                 alert("Delete data Unsuccess,error"+error); 
             });            
+        } 
+
+        async function CloudInsertdata(){
+            var ref = collection(dbStore,"LIFFMember");
+
+            const docRef = await addDoc(
+                ref,{
+                    "Display Name": document.getElementById("displayName").innerHTML,
+                    "E-Mail Address": "test1@gmail.com"
+                }
+            )
+            .then(()=>{ 
+                alert("Insert Cloud data success");
+            })
+            .catch((error)=>{ 
+                alert("Insert Cloud data Unsuccess,error"+error); 
+            });             
         } 
 
       </script>
