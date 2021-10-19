@@ -120,7 +120,7 @@
         const db = getDatabase(); 
         const dbStore = getFirestore(); 
         
-        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',CloudInsertdata);
+        var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',CloudInsertdataCustomID);
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
         var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',UpdateData);
         var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',DeleteData);
@@ -175,8 +175,25 @@
             });            
         } 
 
-        async function CloudInsertdata(){
+        async function CloudInsertdataAutoID(){
             var ref = collection(dbStore,"LIFFMember");
+
+            const docRef = await addDoc(
+                ref,{
+                    "Display Name": document.getElementById("displayName").innerHTML,
+                    "E-Mail Address": "test1@gmail.com"
+                }
+            )
+            .then(()=>{ 
+                alert("Insert Cloud data success");
+            })
+            .catch((error)=>{ 
+                alert("Insert Cloud data Unsuccess,error"+error); 
+            });             
+        } 
+
+        async function CloudInsertdataCustomID(){
+            var ref = collection(dbStore,"LIFFMember",document.getElementById("displayName").innerHTM);
 
             const docRef = await addDoc(
                 ref,{
