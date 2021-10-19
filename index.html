@@ -117,8 +117,8 @@
         
         var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',Insertdata);
         var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
-        var UpdBtn = document.getElementById("button-testUpdate"); SelBtn.addEventListener('click',UpdateData);
-        var DelBtn = document.getElementById("button-testDelete"); SelBtn.addEventListener('click',DeleteData);
+        var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',UpdateData);
+        var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',DeleteData);
 
         function Insertdata(){
             set(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
