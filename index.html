@@ -180,8 +180,8 @@
 
             const docRef = await addDoc(
                 ref,{
-                    "Display Name": document.getElementById("displayName").innerHTML,
-                    "E-Mail Address": document.getElementById("getDecodedIDToken").innerHTML
+                    "DisplayName": document.getElementById("displayName").innerHTML,
+                    "E-MailAddress": document.getElementById("getDecodedIDToken").innerHTML
                 }
             )
             .then(()=>{ 
@@ -197,8 +197,8 @@
 
             const docRef = await setDoc(
                 ref,{
-                    "Display Name": document.getElementById("displayName").innerHTML,
-                    "E-Mail Address": document.getElementById("getDecodedIDToken").innerHTML
+                    "DisplayName": document.getElementById("displayName").innerHTML,
+                    "E-MailAddress": document.getElementById("getDecodedIDToken").innerHTML
                 }
             )
             .then(()=>{ 
@@ -214,7 +214,7 @@
             const docSnap = await getDoc(ref);
             
             if(docSnap.exists()){
-                alert("Select Cloud data Success "+docSnap.data());
+                alert("Select Cloud data Success "+docSnap.data().DisplayName);
             }else{
                 alert("Select Cloud data not Found");
             }
