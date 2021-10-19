@@ -121,14 +121,14 @@
         const dbStore = getFirestore(); 
         
         var InsBtn = document.getElementById("button-testInsert"); InsBtn.addEventListener('click',CloudInsertdataCustomID);
-        var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',SelectData);
+        var SelBtn = document.getElementById("button-testSelect"); SelBtn.addEventListener('click',CloudSelectdata);
         var UpdBtn = document.getElementById("button-testUpdate"); UpdBtn.addEventListener('click',UpdateData);
         var DelBtn = document.getElementById("button-testDelete"); DelBtn.addEventListener('click',DeleteData);
 
         function Insertdata(){
             set(ref(db,"/LIFFMember/"+document.getElementById("displayName").innerHTML),{ 
                 testname: document.getElementById("displayName").innerHTML,
-                testemail: "test1@gmail.com" 
+                testemail: document.getElementById("getDecodedIDToken").innerHTML 
             })
             .then(()=>{ 
                 alert("Insert data success");
@@ -181,7 +181,7 @@
             const docRef = await addDoc(
                 ref,{
                     "Display Name": document.getElementById("displayName").innerHTML,
-                    "E-Mail Address": "test1@gmail.com"
+                    "E-Mail Address": document.getElementById("getDecodedIDToken").innerHTML
                 }
             )
             .then(()=>{ 
@@ -207,6 +207,17 @@
             .catch((error)=>{ 
                 alert("Insert Cloud data Unsuccess,error"+error); 
             });             
+        } 
+
+        async function CloudSelectdata(){
+            var ref = doc(dbStore,"LIFFMember",document.getElementById("displayName").innerHTML);
+            const docSnap = await getDoc(ref);
+            
+            if(docSnap.exists()){
+                alert(docSnap.data().emailaddress);
+            }else{
+                alert("Select data not Found");
+            }
         } 
 
       </script>
