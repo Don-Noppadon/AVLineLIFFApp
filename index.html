@@ -214,7 +214,7 @@
             const docSnap = await getDoc(ref);
             
             if(docSnap.exists()){
-                alert("Select Cloud data Success "+docSnap.data().displayname);
+                alert("Select Cloud data Success "+docSnap.data());
             }else{
                 alert("Select Cloud data not Found");
             }
